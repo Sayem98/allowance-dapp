@@ -41,7 +41,7 @@ contract Allowance is Ownable{
         Data storage data = Allowances[_person];
 
         data.isAllowed = true;
-        data.value = _value;
+        data.value = data.value+_value;
 
         emit AllowEvent(_person, msg.sender, _value);
 
